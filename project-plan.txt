@@ -1,0 +1,6 @@
+Project plan:
+create 3 main pages
+index.html (Homepage)
+new-post.html (Create Post)
+post.html (View/Edit Post)
+JavaScript will handle CRUD operations for the pages
