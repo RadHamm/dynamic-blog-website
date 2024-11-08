@@ -10,6 +10,7 @@ function loadPost() {
     //  post details
     document.getElementById('post-title').textContent = post.title;
     document.getElementById('post-content').textContent = post.content;
+    
     if (post.image) {
         document.getElementById('post-image').src = post.image;
     } else {

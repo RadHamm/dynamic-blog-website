@@ -13,12 +13,14 @@ function savePost(event) {
         document.getElementById('form-message').style.color = 'red';
         return;
     }
+    const url = title.replace(/\s+/g, '-').toLowerCase(); // unique ID
 
     // Creates new post object
     const newPost = {
         title,
         content,
         image: image || null,
+        url: url
     };
 
     // Get existing posts from localStorage, or create an empty array
