@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post for Edit and Viewing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Post</h1>
+        <a href="index.html">Back to Homepage</a>
+    </header>
+    
+    <main>
+        <div id="post-details">
+            <h2 id="post-title"></h2>
+            <p id="post-content"></p>
+            <img id="post-image" alt="Post Image" style="max-width: 100%; height: auto;">
+            <button id="edit-button">Edit Post</button>
+        </div>
+        
+        <div id="edit-form" style="display: none;">
+            <h3>Edit Post</h3>
+            <form id="edit-post-form">
+                <label for="edit-title">Title:</label>
+                <input type="text" id="edit-title" required><br><br>
+
+                <label for="edit-content">Content:</label><br>
+                <textarea id="edit-content" required></textarea><br><br>
+
+                <label for="edit-image">Image URL:</label>
+                <input type="text" id="edit-image"><br><br>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Steven Hamm 2024</p>
+    </footer>
+
+    <script src="post.js"></script>
+</body>
+</html>
