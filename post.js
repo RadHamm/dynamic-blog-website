@@ -20,6 +20,10 @@ function loadPost() {
     document.getElementById('edit-button').addEventListener('click', function() {
         toggleEditForm(post);  // Show the edit form with current post data
     });
+// delete button
+    document.getElementById('delete-button').addEventListener('click', function() {
+        deletePost(post);
+    });
 }
 
 // Function to use the edit form and show current post data
@@ -69,5 +73,13 @@ function toggleEditForm(post) {
         alert('Post updated successfully!');
     };
 }
+function deletePost(post) {
+    const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+    const updatedPosts = posts.filter(p => p.url !== post.url);  // Remove the post with matching URL ID
+    
+    // Save the updated posts back to localStorage
+    localStorage.setItem('blogPosts', JSON.stringify(updatedPosts));
+}
+
 // load post when page loads
 window.onload = loadPost;
